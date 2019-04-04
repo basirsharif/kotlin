@@ -47,7 +47,7 @@ interface IrReturnableBlock : IrBlock, IrSymbolOwner, IrReturnTarget {
 val IrReturnableBlock.sourceFileSymbol: IrFileSymbol?
     get() = inlineFunctionSymbol?.owner?.file?.symbol
 
-
+@Deprecated("Please avoid using it")
 val IrReturnableBlock.sourceFileName: String
     get() = sourceFileSymbol?.owner?.name ?: "no source file"
 
